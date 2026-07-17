@@ -32,7 +32,7 @@ def build_id_to_token_vocab(token_to_id):
     return id_to_token
 
 # Step 3 - encode_sentence_to_ids
-def encode_sentence_to_ids(sentence, token_to_id, unk_token='<unk>'):
+def encode_sentence_to_ids(sentence, vocab, unk_token='<unk>'):
     if len(sentence) == 0:
         return []
     words = sentence.split(" ")
