@@ -47,8 +47,13 @@ def encode_sentence_to_ids(sentence, vocab, unk_token='<unk>'):
 
     return res
 
-# Step 4 - decode_ids_to_tokens (not yet solved)
-# TODO: implement
+# Step 4 - decode_ids_to_tokens
+def decode_ids_to_tokens(ids, id_to_token):
+    res = []
+    for id in ids:
+        res.append(id_to_token[id])
+
+    return res
 
 # Step 5 - pad_id_sequence (not yet solved)
 # TODO: implement
