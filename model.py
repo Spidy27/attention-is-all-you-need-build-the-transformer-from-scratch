@@ -31,8 +31,21 @@ def build_id_to_token_vocab(token_to_id):
 
     return id_to_token
 
-# Step 3 - encode_sentence_to_ids (not yet solved)
-# TODO: implement
+# Step 3 - encode_sentence_to_ids
+def encode_sentence_to_ids(sentence, token_to_id, unk_token='<unk>'):
+    if len(sentence) == 0:
+        return []
+    words = sentence.split(" ")
+    res = []
+
+    for word in words:
+        if word not in vocab:
+            res.append(vocab[unk_token])
+
+        else:
+            res.append(vocab[word]) 
+
+    return res
 
 # Step 4 - decode_ids_to_tokens (not yet solved)
 # TODO: implement
